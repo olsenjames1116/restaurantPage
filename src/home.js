@@ -1,5 +1,6 @@
 export default function loadHome() {
     const navBar = document.createElement('ul');
+    navBar.setAttribute('id', 'navBar');
     const homeNav = document.createElement('li');
     homeNav.textContent = 'Home';
     const menuNav = document.createElement('li');
