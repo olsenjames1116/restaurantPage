@@ -2,4 +2,4 @@ import loadHome from './home.js';
 import loadMenu from './menu.js';
 import loadContact from './contact.js';
 
-window.addEventListener("load", loadContact);
+window.addEventListener("load", loadHome);
