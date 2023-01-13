@@ -1,1 +1,1 @@
-console.log('Hello');
+window.addEventListener("load", () => console.log('Hello'));
