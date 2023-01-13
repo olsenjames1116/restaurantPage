@@ -1,3 +1,4 @@
 import loadHome from './home.js';
+import loadMenu from './menu.js';
 
-window.addEventListener("load", loadHome);
+window.addEventListener("load", loadMenu);

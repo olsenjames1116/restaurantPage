@@ -12,7 +12,7 @@ export default function loadHome() {
     header.setAttribute('id', 'header');
     const h1 = document.createElement('h1');
     h1.textContent = `Paddy's Pub`;
-    header.append(h1);
+    header.appendChild(h1);
 
     const mainContent = document.createElement('div');
     mainContent.setAttribute('id', 'mainContent');
