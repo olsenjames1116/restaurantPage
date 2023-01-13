@@ -1,9 +1,18 @@
 export default function loadHome() {
+    const navBar = document.createElement('ul');
+    const homeNav = document.createElement('li');
+    homeNav.textContent = 'Home';
+    const menuNav = document.createElement('li');
+    menuNav.textContent = 'Menu';
+    const contactNav = document.createElement('li');
+    contactNav.textContent = 'Contact';
+    navBar.append(homeNav, menuNav, contactNav);
+
     const header = document.createElement('div');
     header.setAttribute('id', 'header');
     const h1 = document.createElement('h1');
     h1.textContent = `Paddy's Pub`;
-    header.appendChild(h1);
+    header.append(h1);
 
     const mainContent = document.createElement('div');
     mainContent.setAttribute('id', 'mainContent');
@@ -41,5 +50,5 @@ export default function loadHome() {
     footer.appendChild(footerAuthor);
 
     const content = document.querySelector('div#content');
-    content.append(header, mainContent, footer);
+    content.append(navBar, header, mainContent, footer);
 }
