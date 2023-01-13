@@ -70,9 +70,7 @@ function loadFooter() {
     const footerAuthor = document.createElement('p');
     footerAuthor.innerHTML = 'Built and designed by <a href="https://github.com/olsenjames1116">olsenjames1116</a>';
     
-    const footer = document.createElement('div');
-    footer.setAttribute('id', 'footer');
-    footer.appendChild(footerAuthor);
+    const footer = elementFactory('div', 'footer', footerAuthor);
     return footer;
 }
 
