@@ -1,1 +1,3 @@
-window.addEventListener("load", () => console.log('Hello'));
+import loadHome from './home.js';
+
+window.addEventListener("load", loadHome);
