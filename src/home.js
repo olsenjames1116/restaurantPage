@@ -14,6 +14,10 @@ const elementFactory = (selector, id, ...children) => {
     return element;
 };
 
+function clearContent() {
+    document.querySelector('div#content').innerHTML = '';
+}
+
 function loadNavBar() {
     const homeNav = elementFactory('li', 'homeNav', 'Home');
     const menuNav = elementFactory('li', 'menuNav', 'Menu');
@@ -81,6 +85,7 @@ function loadContent(header, navBar, mainContent, footer) {
 
 
 export default function loadHome() {
+    clearContent();
     const header = loadHeader();
     const navBar = loadNavBar();
 
