@@ -88,6 +88,7 @@ function loadContent(content, mainContent) {
 export default function loadHome() {
     let mainContent = document.querySelector('div#mainContent');
     const content = document.querySelector('div#content');
+    // content.setAttribute('style', `background-image: url('../background.jpg')`);
 
     if(mainContent===null) {
         const header = loadHeader();
