@@ -30,8 +30,9 @@ function loadNavBar() {
 
 function loadHeader() {
     const h1 = elementFactory('h1', null, 'Paddy\'s Pub');
+    const navBar = loadNavBar();
     
-    const header = elementFactory('div', 'header', h1);
+    const header = elementFactory('div', 'header', h1, navBar);
     return header;
 }
 
@@ -90,9 +91,8 @@ export default function loadHome() {
 
     if(mainContent===null) {
         const header = loadHeader();
-        const navBar = loadNavBar();
         const footer = loadFooter();
-        content.append(header, navBar, footer);
+        content.append(header, footer);
     }
     else{
         clearContent(mainContent);
