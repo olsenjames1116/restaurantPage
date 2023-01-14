@@ -14,8 +14,9 @@ const elementFactory = (selector, id, ...children) => {
     return element;
 };
 
-function clearContent() {
-    document.querySelector('div#content').innerHTML = '';
+function clearContent(mainContent) {
+    document.querySelector('div#content')
+            .removeChild(mainContent);
 }
 
 function loadNavBar() {
@@ -78,23 +79,31 @@ function loadFooter() {
     return footer;
 }
 
-function loadContent(header, navBar, mainContent, footer) {
-    const content = document.querySelector('div#content');
-    content.append(header, navBar, mainContent, footer);
+function loadContent(content, mainContent) {
+    content.insertBefore(mainContent, document.querySelector('div#footer'));
 }
 
 
 export default function loadHome() {
-    clearContent();
-    const header = loadHeader();
-    const navBar = loadNavBar();
+    let mainContent = document.querySelector('div#mainContent');
+    const content = document.querySelector('div#content');
+
+    if(mainContent===null) {
+        const header = loadHeader();
+        const navBar = loadNavBar();
+        const footer = loadFooter();
+        content.append(header, navBar, footer);
+    }
+    else{
+        clearContent(mainContent);
+    }
+    
 
     const quote = loadQuote();
     const hours = loadHours();
     const location = loadLocation();
-    const mainContent = loadMainContent(quote, hours, location);
+    mainContent = loadMainContent(quote, hours, location);
 
-    const footer = loadFooter();
 
-    loadContent(header, navBar, mainContent, footer);
+    loadContent(content, mainContent);
 }
