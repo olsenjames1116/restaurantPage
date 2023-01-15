@@ -35,8 +35,9 @@ function menuFactory(id, headerText, contentText, src) {
     const itemHeader = elementFactory('h3', null,headerText);
     const itemContent = elementFactory('p', null, contentText);
     const image = imageFactory(src);
+    const imageContainer = elementFactory('div', null, image);
 
-    const item = elementFactory('div', id, itemHeader, itemContent, image);
+    const item = elementFactory('div', id, itemHeader, itemContent, imageContainer);
     return item;
 }
 
