@@ -75,8 +75,10 @@ function loadMainContent(quote, hours, location) {
 function loadFooter() {
     const footerAuthor = document.createElement('p');
     footerAuthor.innerHTML = 'Built and designed by <a href="https://github.com/olsenjames1116">olsenjames1116</a>';
+    const footerSources = document.createElement('p');
+    footerSources.innerHTML = 'Images provided by <a href="https://unsplash.com/@shotaspot">@shotaspot</a>, <a href="https://unsplash.com/@enginakyurt">@enginakyurt</a>, <a href="https://unsplash.com/@seemurph18">@seemurph18</a>, <a href="https://unsplash.com/@karographix">@karographix</a>, <a href="https://unsplash.com/@giobartlett">@giobartlett</a>, <a href="https://unsplash.com/@delaneyvan">@delaneyvan</a>, <a href="https://unsplash.com/@__menglong">@__menglong</a> and <a href="https://unsplash.com/@tspoonphoto">@tspoonphoto</a>';
     
-    const footer = elementFactory('div', 'footer', footerAuthor);
+    const footer = elementFactory('div', 'footer', footerAuthor, footerSources);
     return footer;
 }
 
