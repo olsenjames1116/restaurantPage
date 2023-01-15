@@ -1,6 +1,8 @@
 import loadHome from './home.js';
 import loadMenu from './menu.js';
 import loadContact from './contact.js';
+import './style.css';
+import background from './images/background.jpg';
 
 loadHome();
 

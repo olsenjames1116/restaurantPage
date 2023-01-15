@@ -37,7 +37,7 @@ function loadHeader() {
 }
 
 function loadQuote() {
-    const quoteMain = elementFactory('p', null, 'This place totally rocks. Me and all my friends went here on a Friday night after Kyle\'s mom kicked us out. What a bummer! They still served us even after they asked for an ID which we all left in our cars. I know where we\'re partying for prom!');
+    const quoteMain = elementFactory('p', null, '"This place totally rocks. Me and all my friends went here on a Friday night after Kyle\'s mom kicked us out. What a bummer! They still served us even after they asked for an ID which we all left in our cars. I know where we\'re partying for prom!"');
     const quotePerson = elementFactory('p', null, '-Connor');
     
     const quote = elementFactory('div', 'quote', quoteMain, quotePerson);
@@ -88,7 +88,7 @@ function loadContent(content, mainContent) {
 export default function loadHome() {
     let mainContent = document.querySelector('div#mainContent');
     const content = document.querySelector('div#content');
-    // content.setAttribute('style', `background-image: url('../background.jpg')`);
+
 
     if(mainContent===null) {
         const header = loadHeader();

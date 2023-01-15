@@ -14,11 +14,20 @@ const elementFactory = (selector, id, ...children) => {
     return element;
 };
 
-function menuFactory(id, headerText, contentText) {
+const imageFactory = (src) => {
+    const image = document.createElement('img');
+    
+    image.setAttribute('src', src);
+
+    return image;
+}
+
+function menuFactory(id, headerText, contentText, src) {
     const itemHeader = elementFactory('h3', null,headerText);
     const itemContent = elementFactory('p', null, contentText);
+    const image = imageFactory(src);
 
-    const item = elementFactory('div', id, itemHeader, itemContent);
+    const item = elementFactory('div', id, itemHeader, itemContent, image);
     return item;
 }
 

@@ -1,12 +1,14 @@
 *{
-    outline: 1px solid black;
     margin: 0;
+}
+
+html{
+    background: url('./images/background.jpg') no-repeat center center fixed;
+    background-size:cover;
 }
 
 
 div#content{
-    background-image: url('./background.jpg');
-    background-size:cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -20,12 +22,13 @@ div#header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    font-size: 2rem;
 }
 
 div#header>ul{
     width: max-content;
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 div#header>ul>li{
@@ -57,6 +60,19 @@ div#mainContent{
 div#mainContent>*{
     background-color: green;
     width: 75%;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+div#quote, div#hours, div#location{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div#hours>ul>li, div#location>p{
+    display: flex;
+    justify-content: center;
 }
 
 h2{
@@ -64,9 +80,24 @@ h2{
     justify-content: center;
 }
 
-/* div#mainContent p, div#mainContent ul{
-    font-size: 1.5rem;
-} */
+div#drinks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div#people{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+div#people>h2, div#people>div{
+    background-color: green;
+    padding: 30px;
+}
 
 div#footer{
     background-color: black;
